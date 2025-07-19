@@ -1,7 +1,7 @@
 import React, { useRef, useState, useEffect } from "react";
 import "./App.css";
 
-const API_URL = "http://localhost:3000/chat"; // Change to 3001 if your backend runs there
+const API_URL = process.env.REACT_APP_API_URL || "https://chatbot-v015.onrender.com/chat";
 
 function App() {
   const [input, setInput] = useState("");
